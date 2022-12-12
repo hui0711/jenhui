@@ -22,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
 
-    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript">
         const vm = Vue.createApp({
             data () {
