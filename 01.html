@@ -9,6 +9,20 @@
         body {
             padding: 1rem;
         }
+        #radio {
+            display: block;
+        }
+        #radio label {
+            margin-right: 1rem;
+        }
+        #radio input:not([type]) {
+            margin-left: 1rem;
+            min-width: 300px;
+            width: 50%;
+            height: 1rem;
+            line-height: 1rem;
+            padding: 2px 3px;
+        }
     </style>
 </head>
 <body>
@@ -16,6 +30,38 @@
         <h1>Hello, world!</h1>
         <input v-model="message" placeholder="edit me">
         <p>Message is: {{ message }}</p>
+
+        <hr />
+
+        <div id="count">
+            <p>Count: {{ count }}</p>
+            <button @click="plus">Click Me</button>
+        </div>
+
+        <hr />
+
+        <div id="radio">
+            Choose One:
+            <label>
+              <input type="radio" value="username" v-model="loginType">
+              Username
+            </label>
+          
+            <label>
+              <input type="radio" value="email" v-model="loginType">
+              Email
+            </label>
+            <br>
+            <template v-if="loginType === 'username'">
+              <label>Username</label>
+              <input placeholder="Enter your username">
+            </template>
+    
+            <template v-else>
+              <label>Email</label>
+              <input placeholder="Enter your email address">
+            </template>
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -26,8 +72,16 @@
         const vm = Vue.createApp({
             data () {
                 return{
-                    message: 'Hello'
+                    message: 'Hello',
+                    count: 0,
+                    loginType: 'username'
                 } 
+            },
+            methods: {
+                plus: function() {
+                    this.count++;
+                    
+                }
             }
         });
         vm.mount('#app');
