@@ -57,7 +57,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
-        <template v-for="session in sections">
+        <!-- <template v-for="session in sections">
             <li class="nav-item">
               <m-dropdown :clips="session.clips" @update="updateUrl">{{ session.title }}</m-dropdown>
               <div class="dropdown">
@@ -71,9 +71,9 @@
                 </ul>
               </div>
             </li>
-          </template>
+          </template> -->
 
-        <!-- <template v-for="session in sections">
+        <template v-for="session in sections">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <div class="dropdown">
@@ -87,7 +87,7 @@
                     </ul>
                 </div>
             </li>
-        </template> -->
+        </template>
 
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -160,8 +160,14 @@
         var navbar = new Vue({
             data:{
                 sections: video
-            },
+            }
         }).$mount("#navbar");
+
+        // var navbar = new Vue({
+        //   data:{
+        //     sections: video
+        //   }
+        // }).$mount("#navbar");
     </script>
 
       
