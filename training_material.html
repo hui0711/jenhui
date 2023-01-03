@@ -61,11 +61,11 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                {{session.title}}
+                {{ session.title }}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <template v-for="clip in session.clips">
-                        <li><a class="dropdown-item" href="clip.url">{{clip.title}}</a></li>
+                        <li><a class="dropdown-item" href="clip.url">{{ clip.title }}</a></li>
                     </template>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
