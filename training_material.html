@@ -75,7 +75,6 @@
 
         <template v-for="session in sections">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ session.title }}
@@ -89,9 +88,6 @@
             </li>
         </template>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -163,11 +159,7 @@
             }
         }).$mount("#navbar");
 
-        // var navbar = new Vue({
-        //   data:{
-        //     sections: video
-        //   }
-        // }).$mount("#navbar");
+        
     </script>
 
       
